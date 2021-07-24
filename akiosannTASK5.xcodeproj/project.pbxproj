@@ -13,6 +13,7 @@
 		CF9CD24026ABC3280085458A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD23E26ABC3280085458A /* Main.storyboard */; };
 		CF9CD24226ABC32C0085458A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD24126ABC32C0085458A /* Assets.xcassets */; };
 		CF9CD24526ABC32C0085458A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CD24326ABC32C0085458A /* LaunchScreen.storyboard */; };
+		CF9CD24D26ABC3C20085458A /* DividedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CD24C26ABC3C20085458A /* DividedBy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF9CD24126ABC32C0085458A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9CD24426ABC32C0085458A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9CD24626ABC32C0085458A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9CD24C26ABC3C20085458A /* DividedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividedBy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CF9CD23826ABC3280085458A /* AppDelegate.swift */,
 				CF9CD23A26ABC3280085458A /* SceneDelegate.swift */,
 				CF9CD23C26ABC3280085458A /* ViewController.swift */,
+				CF9CD24C26ABC3C20085458A /* DividedBy.swift */,
 				CF9CD23E26ABC3280085458A /* Main.storyboard */,
 				CF9CD24126ABC32C0085458A /* Assets.xcassets */,
 				CF9CD24326ABC32C0085458A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				CF9CD23D26ABC3280085458A /* ViewController.swift in Sources */,
 				CF9CD23926ABC3280085458A /* AppDelegate.swift in Sources */,
+				CF9CD24D26ABC3C20085458A /* DividedBy.swift in Sources */,
 				CF9CD23B26ABC3280085458A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
