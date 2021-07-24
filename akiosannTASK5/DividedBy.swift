@@ -6,16 +6,18 @@
 //
 
 import Foundation
-//委譲する処理をプロトコルで宣言
-protocol DividedBydelegate: AnyObject{
+//委譲するプロトコルで宣言
+protocol DividedByAlertDelegate: AnyObject{
     func dividedBydidStart()
+    func dialogAlert(message: String)
 }
 
+//処理を委任するクラス
 class DividedBy {
-   weak var delegate: DividedBydelegate?
-    
+    //delegateをを通じて委任する
+    weak var delegate: DividedByAlertDelegate?
     func dividedBy(){
         delegate?.dividedBydidStart()
     }
-  
+    
 }

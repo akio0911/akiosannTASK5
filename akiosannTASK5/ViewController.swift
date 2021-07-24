@@ -23,8 +23,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dividedByButton(_ sender: UIButton) {
+        //dividedByのメソッドをここで呼ぶ
         dividedBy.dividedBy()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+}
+//処理をViewControllerに任せる
+extension ViewController: DividedByAlertDelegate{
+    //DividedByAlertDelegateの関数たちを定義
     func dialogAlert(message: String) {
         let alert = UIAlertController(title: "Task5", message: message, preferredStyle: .alert )
         
@@ -32,9 +42,6 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
     
-}
-
-extension ViewController: DividedBydelegate{
     func dividedBydidStart() {
         
         guard let text1 = Double(text1Field.text!) else {
@@ -48,18 +55,12 @@ extension ViewController: DividedBydelegate{
         //text2の値が0の時にdialogAlertを出してそれ以外の場合は結果を表示する
         if text2 == 0 {
             dialogAlert(message: "割る時は０以外を入力してください")
-            return
         } else {
             
             resultLabel.text = String(text1 / text2)
             
         }
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-  
     
     
 }
