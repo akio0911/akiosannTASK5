@@ -14,17 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet private var text2Field: UITextField!
     
     @IBOutlet private var resultLabel: UILabel!
-    private  let dividedBy = DividedBy()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        dividedBy.delegate = self
         text1Field.keyboardType = .decimalPad
         text2Field.keyboardType = .decimalPad
     }
     
     @IBAction func dividedByButton(_ sender: UIButton) {
-        //dividedByのメソッドをここで呼ぶ
-        dividedBy.dividedBy()
+        dividedBydidStart()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,16 +31,16 @@ class ViewController: UIViewController {
     
 }
 //処理をViewControllerに任せる
-extension ViewController: DividedByAlertDelegate{
+extension ViewController {
     //DividedByAlertDelegateの関数たちを定義
-    func dialogAlert(message: String) {
+    private func dialogAlert(message: String) {
         let alert = UIAlertController(title: "Task5", message: message, preferredStyle: .alert )
         
         alert.addAction(UIAlertAction(title: "ok", style: .default))
         present(alert, animated: true)
     }
     
-    func dividedBydidStart() {
+    private func dividedBydidStart() {
         
         guard let text1 = Double(text1Field.text!) else {
             dialogAlert(message: "割られる数を入力してください")
